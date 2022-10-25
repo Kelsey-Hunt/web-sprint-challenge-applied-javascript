@@ -1,5 +1,4 @@
-const Card = (article) => {
-  // TASK 5
+ // TASK 5
   // ---------------------
   // Implement this function, which should return the markup you see below.
   // It takes as its only argument an "article" object with `headline`, `authorPhoto` and `authorName` properties.
@@ -17,6 +16,34 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
+
+const Card = (article) => {
+ const card = document.createElement('div');
+ card.classList.add('card');
+
+ const headline = document.createElement('div');
+ headline.classList.add('headline');
+ headline.textContent = article.headline;
+ card.appendChild(headline);
+
+ const author = document.createElement('div');
+ author.classList.add('author');
+ card.appendChild(author);
+
+ const imgContainer = document.createElement('div');
+ imgContainer.classList.add('img-container');
+ author.appendChild(imgContainer);
+
+
+ const img = document.createElement('img');
+ img.src = article.authorPhoto;
+ imgContainer.appendChild(img);
+
+ const by = document.createElement('span');
+ by.textContent = `By ${article.authorName}`;
+ author.appendChild(by);
+
+ return card;
 }
 
 const cardAppender = (selector) => {
