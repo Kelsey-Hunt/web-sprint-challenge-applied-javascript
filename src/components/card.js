@@ -73,29 +73,6 @@ const cardAppender = (selector) => {
         container.appendChild(card);
       })
     })
-
-    // const keys = [];
-    
-
-    // for(const [key, value] of Object.entries(articles)) {
-    //   keys.push(key);
-    // };
-
-    // keys.forEach((item) => {
-    //   const data = response.data.articles.item;
-    //   console.log(data);
-    // })
-
-
-
-    // console.log(keys);
-
-    
-
-    
-
-   
-    console.log(response.data.articles);
   })
   .catch(error => {
     console.log("Error", error);
